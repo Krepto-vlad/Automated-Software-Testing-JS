@@ -11,6 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+coverage
+jest-html-reporters-attach
+jest_html_reporters.html
+test-report.html
 
 # Editor directories and files
 .vscode/*
