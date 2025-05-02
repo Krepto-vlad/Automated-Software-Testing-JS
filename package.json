@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "jest --coverage --reporters=default --reporters=jest-html-reporters",
+    "test": "jest --coverage",
     "coverage": "c8 --reporter=html --reporter=text npm test",
     "lint": "eslint .",
     "prepare": "husky install"

@@ -10,10 +10,10 @@ export default {
     coverageReporters: ['text', 'html'],
     reporters: [
       'default',
-      ['jest-html-reporter', {
-        pageTitle: 'Test Report',
-        outputPath: 'test-report.html',
-      }],
+      ["jest-junit", {
+        outputDirectory: "./test-results", 
+        outputName: "test-report.xml", 
+      }]
     ],
     testResultsProcessor: 'jest-junit',
   };
