@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="32" failures="0" errors="0" time="1.357">
+  <testsuite name="stringUtils" errors="0" failures="0" skipped="0" timestamp="2025-05-02T16:51:48" time="0.542" tests="7">
+    <testcase classname="stringUtils capitalize capitalizes string" name="stringUtils capitalize capitalizes string" time="0.002">
+    </testcase>
+    <testcase classname="stringUtils reverseString reverses string" name="stringUtils reverseString reverses string" time="0.003">
+    </testcase>
+    <testcase classname="stringUtils isPalindrome returns true for palindrome works" name="stringUtils isPalindrome returns true for palindrome works" time="0">
+    </testcase>
+    <testcase classname="stringUtils isPalindrome returns false for non-palindrome" name="stringUtils isPalindrome returns false for non-palindrome" time="0">
+    </testcase>
+    <testcase classname="stringUtils capitalize throws error if input is not string" name="stringUtils capitalize throws error if input is not string" time="0.005">
+    </testcase>
+    <testcase classname="stringUtils reverseString throws error if input is not string" name="stringUtils reverseString throws error if input is not string" time="0.001">
+    </testcase>
+    <testcase classname="stringUtils isPalindrome throws error if input is not string" name="stringUtils isPalindrome throws error if input is not string" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="userListUtils" errors="0" failures="0" skipped="0" timestamp="2025-05-02T16:51:48" time="0.068" tests="10">
+    <testcase classname="userListUtils filterUsersByAge filters correctly" name="userListUtils filterUsersByAge filters correctly" time="0.001">
+    </testcase>
+    <testcase classname="userListUtils sortUsersByName sorts alphabetically" name="userListUtils sortUsersByName sorts alphabetically" time="0.008">
+    </testcase>
+    <testcase classname="userListUtils findUserById finds correct user" name="userListUtils findUserById finds correct user" time="0">
+    </testcase>
+    <testcase classname="userListUtils findUserById returns null if user not found" name="userListUtils findUserById returns null if user not found" time="0">
+    </testcase>
+    <testcase classname="userListUtils isEmailTaken returns true for existing email" name="userListUtils isEmailTaken returns true for existing email" time="0.001">
+    </testcase>
+    <testcase classname="userListUtils isEmailTaken returns false for non-existing email" name="userListUtils isEmailTaken returns false for non-existing email" time="0">
+    </testcase>
+    <testcase classname="userListUtils filterUsersByAge throws error when input is not array" name="userListUtils filterUsersByAge throws error when input is not array" time="0.012">
+    </testcase>
+    <testcase classname="userListUtils sortUsersByName throws error when input is not array" name="userListUtils sortUsersByName throws error when input is not array" time="0.001">
+    </testcase>
+    <testcase classname="userListUtils findUserById throws error when input is not array" name="userListUtils findUserById throws error when input is not array" time="0.001">
+    </testcase>
+    <testcase classname="userListUtils isEmailTaken throws error when input is not array" name="userListUtils isEmailTaken throws error when input is not array" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="arrayUtils" errors="0" failures="0" skipped="0" timestamp="2025-05-02T16:51:48" time="0.051" tests="6">
+    <testcase classname="arrayUtils findMax returns max value" name="arrayUtils findMax returns max value" time="0.001">
+    </testcase>
+    <testcase classname="arrayUtils findMin returns min value" name="arrayUtils findMin returns min value" time="0.001">
+    </testcase>
+    <testcase classname="arrayUtils removeDuplicates removes duplicates" name="arrayUtils removeDuplicates removes duplicates" time="0">
+    </testcase>
+    <testcase classname="arrayUtils findMax throws error if input is not array" name="arrayUtils findMax throws error if input is not array" time="0.003">
+    </testcase>
+    <testcase classname="arrayUtils findMin throws error if input is not array" name="arrayUtils findMin throws error if input is not array" time="0">
+    </testcase>
+    <testcase classname="arrayUtils removeDuplicates throws error if input is not array" name="arrayUtils removeDuplicates throws error if input is not array" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="mathUtils" errors="0" failures="0" skipped="0" timestamp="2025-05-02T16:51:49" time="0.046" tests="5">
+    <testcase classname="mathUtils add adds two numbers" name="mathUtils add adds two numbers" time="0">
+    </testcase>
+    <testcase classname="mathUtils subtract subtracts numbers" name="mathUtils subtract subtracts numbers" time="0.001">
+    </testcase>
+    <testcase classname="mathUtils multiply multiplies numbers" name="mathUtils multiply multiplies numbers" time="0">
+    </testcase>
+    <testcase classname="mathUtils divide divides numbers" name="mathUtils divide divides numbers" time="0">
+    </testcase>
+    <testcase classname="mathUtils divide by zero throws error" name="mathUtils divide by zero throws error" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="checkStudentKnowledge" errors="0" failures="0" skipped="0" timestamp="2025-05-02T16:51:49" time="0.041" tests="4">
+    <testcase classname="checkStudentKnowledge returns true for correct answers" name="checkStudentKnowledge returns true for correct answers" time="0">
+    </testcase>
+    <testcase classname="checkStudentKnowledge returns false for incorrect values" name="checkStudentKnowledge returns false for incorrect values" time="0.001">
+    </testcase>
+    <testcase classname="checkStudentKnowledge returns false for different keys" name="checkStudentKnowledge returns false for different keys" time="0">
+    </testcase>
+    <testcase classname=" returns false if keys have same names but different order" name=" returns false if keys have same names but different order" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>
