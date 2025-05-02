@@ -60,7 +60,3 @@ jobs:
         with:
           name: jest-results
           path: test-results/
-          
-cache:
-  paths:
-    - node_modules/
