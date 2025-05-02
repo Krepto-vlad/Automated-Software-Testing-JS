@@ -1,8 +1,8 @@
-import { capitalize, reverseString, isPalindrome } from '../src/utils/stringUtils';
+import { capitalize, reverseString, isPalindrome    } from '../src/utils/stringUtils';
 
 describe('stringUtils', () => {
-  test('capitalize capitalizes string', () => {
-    expect(capitalize('hello')).toBe('Hello');
+  test('capitalize capitalizes string', () =>  {
+    expect(capitalize('hello')).toBe('Hello' )
   });
 
   test('reverseString reverses string', () => {
