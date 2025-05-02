@@ -15,5 +15,6 @@ export default {
         outputPath: 'test-report.html',
       }],
     ],
+    testResultsProcessor: 'jest-junit',
   };
   

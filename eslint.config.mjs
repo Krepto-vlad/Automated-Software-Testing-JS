@@ -1,4 +1,3 @@
-import js from '@eslint/js';
 import jestPlugin from 'eslint-plugin-jest';
 
 export default [
@@ -18,7 +17,6 @@ export default [
       ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
-        // Объявляем jest-глобали вручную, без `env`
         describe: true,
         test: true,
         expect: true,
@@ -34,7 +32,6 @@ export default [
       jest: jestPlugin,
     },
     rules: {
-      // Твои ESLint правила
       'array-callback-return': 'warn',
       'prefer-destructuring': ['warn', { array: false, object: true }, { enforceForRenamedProperties: false }],
       'prefer-template': 'error',
