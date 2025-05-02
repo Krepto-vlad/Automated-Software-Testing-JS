@@ -15,6 +15,5 @@ export default {
         outputName: "test-report.xml", 
       }]
     ],
-    testResultsProcessor: 'jest-junit',
   };
   
