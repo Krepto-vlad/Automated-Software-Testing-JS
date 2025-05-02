@@ -1,12 +1,12 @@
-import { capitalize, reverseString, isPalindrome    } from '../src/utils/stringUtils';
+import { capitalize, reverseString, isPalindrome} from '../src/utils/stringUtils';
 
 describe('stringUtils', () => {
-  test('capitalize capitalizes string', () =>  {
-    expect(capitalize('hello')).toBe('Hello' )
+  test('capitalize capitalizes string', () => {
+    expect(capitalize('hello')).toBe('Hello');
   });
 
   test('reverseString reverses string', () => {
-    expect(reverseString('abc')).toBe('cba');
+    expect(reverseString('abc')).toBe('cba')
   });
 
   test('isPalindrome returns true for palindrome works', () => {
