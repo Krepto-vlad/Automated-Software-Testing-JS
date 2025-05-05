@@ -1,4 +1,18 @@
 #!/bin/sh
-npx lint-staged
+. "$(dirname "$0")/_/husky.sh"
 
-npm run test
+echo "husky > starting pre-commit hook"
+echo "husky > running the eslint..."
+npm run lint-staged ||
+{
+  echo
+  echo "husky > pre-commit hook failed (try using the 'npm run lint:fix' command)"
+  exit 1
+}
+
+npm run test ||
+{
+  echo
+  echo "husky > pre-commit hook failed on tests"
+  exit 1
+}
