@@ -10,11 +10,19 @@
     "test": "jest --coverage",
     "coverage": "c8 --reporter=html --reporter=text npm test",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "lint-staged": "lint-staged --quiet",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.js": "eslint --fix"
+    "*.js": [
+			"eslint --fix"
+		],
+    "*.{ts,tsx,js,json}": [
+      "eslint --fix"
+    ]
   },
+ 
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.1",
