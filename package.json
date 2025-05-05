@@ -10,17 +10,9 @@
     "test": "jest --coverage",
     "coverage": "c8 --reporter=html --reporter=text npm test",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix",
+    "lint:fix": "eslint --fix .",
     "lint-staged": "lint-staged --quiet",
     "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.js": [
-			"eslint --fix"
-		],
-    "*.{ts,tsx,js,json}": [
-      "eslint --fix"
-    ]
   },
  
   "devDependencies": {

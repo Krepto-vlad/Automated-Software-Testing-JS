@@ -2,14 +2,14 @@ import jestPlugin from 'eslint-plugin-jest';
 
 export default [
   {
-    files: ['./src/**/*.js', '**/*.js', './__tests__/*.js'],
+    files: ['./src/**/*.js', './__tests__/*.js'],
     ignores: [
       '**/temp.js',
       '*/**/result.js',
       './node_modules/*',
       './test-report/**/*',
       './test-results/**/*',
-      './coverage/**/*',
+      './coverage/*',
       './html-report/**/*',
       './jest-html-reporters-attach/*',
     ],
