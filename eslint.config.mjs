@@ -2,7 +2,7 @@ import jestPlugin from 'eslint-plugin-jest';
 
 export default [
   {
-    files: ['**/*.js', './__tests__/*.js'],
+    files: ['./src/**/*.js', '**/*.js', './__tests__/*.js'],
     ignores: [
       '**/temp.js',
       '*/**/result.js',
