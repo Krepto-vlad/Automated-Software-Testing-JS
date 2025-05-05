@@ -18,7 +18,7 @@ describe("userListUtils", () => {
 
   test("sortUsersByName sorts alphabetically", () => {
     const sorted = sortUsersByName(users);
-    expect(sorted.map((u) => u.name)).toEqual(["Alice", "Bob", "Charlie"]);
+    expect(sorted.map(u => u.name)).toEqual(["Alice", "Bob", "Charlie"]);
   });
 
   test("findUserById finds correct user", () => {

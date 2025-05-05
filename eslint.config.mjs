@@ -17,7 +17,9 @@ export default [
       ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
+        console: true,
         describe: true,
+        document: true,
         test: true,
         expect: true,
         jest: true,

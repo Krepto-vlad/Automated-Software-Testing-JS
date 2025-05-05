@@ -11,7 +11,7 @@ export function filterUsersByAge(users, minAge, maxAge) {
     }
     return users.filter(user => user.age >= minAge && user.age <= maxAge);
   }
-  
+
   /**
    * Sorts the list of users by name (alphabetically).
    * @param {Array} users - List of users.
@@ -23,7 +23,7 @@ export function filterUsersByAge(users, minAge, maxAge) {
     }
     return [...users].sort((a, b) => a.name.localeCompare(b.name));
   }
-  
+
   /**
    * Finds a user by ID.
    * @param {Array} users - List of users.
@@ -36,7 +36,7 @@ export function filterUsersByAge(users, minAge, maxAge) {
     }
     return users.find(user => user.id === id) || null;
   }
-  
+
   /**
    * Checks if there is a user with the specified email in the list.
    * @param {Array} users - List of users.

@@ -6,7 +6,7 @@ describe('stringUtils', () => {
   });
 
   test('reverseString reverses string', () => {
-    expect(reverseString('abc')).toBe('cba')
+    expect(reverseString('abc')).toBe('cba');
   });
 
   test('isPalindrome returns true for palindrome works', () => {
