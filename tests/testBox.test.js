@@ -3,7 +3,7 @@ import { TextBoxPage } from '../src/pages';
 
 test.describe('Text Box Form', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('https://demoqa.com/text-box');
+    await page.goto('https://demoqa.com/text-box', {waitUntil: 'domcontentloaded'});
   });
 
   test('Fill and submit text box form', async ({ page }) => {
