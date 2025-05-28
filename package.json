@@ -8,14 +8,18 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "npx playwright test",
+    "test:BDD": "cucumber-js --config cucumber.config.mjs",
     "test:headed": "npx playwright test --headed",
     "test:report": "npx playwright show-report",
     "test:firefox": "npx playwright test --project=firefox",
     "test:ci": "npx playwright install && npx playwright test"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.52.0",
-    "faker": "^5.5.3"
+    "cucumber": "^6.0.7",
+    "faker": "^5.5.3",
+    "playwright-cucumber-steps": "^0.0.1"
   },
   "dependencies": {
     "@faker-js/faker": "^9.8.0"
