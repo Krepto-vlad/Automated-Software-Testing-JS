@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 import {FormPage, MainPage} from '../src/pages';
-import DataStorage from "../src/helper/DataStorage";
+import DataStorage from "../src/helpers/DataStorage";
 
 test.beforeEach(async ({page}) => {
   await page.goto('https://demoqa.com/', {waitUntil: 'domcontentloaded'});
