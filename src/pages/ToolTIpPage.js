@@ -7,7 +7,9 @@ export default class ToolTipsPage extends BasePage {
 
     this.button = page.locator("#toolTipButton");
     this.field = page.locator("#toolTipTextField");
-    this.link1 = page.locator("#texToolTopContainer a", { hasText: "Contrary"});
+    this.link1 = page.locator("#texToolTopContainer a", {
+      hasText: "Contrary",
+    });
     this.link2 = page.locator("#texToolTopContainer a", { hasText: "1.10.32" });
 
     this.tooltips = {
@@ -19,11 +21,11 @@ export default class ToolTipsPage extends BasePage {
   }
 
   async hoverOn(element, delay = 1000) {
-  const box = await element.boundingBox();
-  await this.page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
-  await element.hover();
-  await this.page.waitForTimeout(delay); 
-}
+    const box = await element.boundingBox();
+    await this.page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+    await element.hover();
+    await this.page.waitForTimeout(delay);
+  }
 
   async getTooltipText(tooltipLocator) {
     await tooltipLocator.waitFor({ state: "visible" });

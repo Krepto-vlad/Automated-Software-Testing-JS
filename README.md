@@ -43,9 +43,9 @@ npm run test:BDD
 ```
 ---
 
-Launch by tag @form
+Run BDD test by tag @date
 ```bash
-npx playwright test --grep "form"
+npx cucumber-js --tags "@date"
 ```
 
 ---

@@ -1,19 +1,19 @@
-import { BasePage } from './index';
+import { BasePage } from "./index";
 
 export default class TextBoxPage extends BasePage {
   constructor(page) {
     super(page);
-    this.fullNameInput = page.locator('#userName');
-    this.emailInput = page.locator('#userEmail');
-    this.currentAddressInput = page.locator('#currentAddress');
-    this.permanentAddressInput = page.locator('#permanentAddress');
-    this.submitButton = page.locator('#submit');
+    this.fullNameInput = page.locator("#userName");
+    this.emailInput = page.locator("#userEmail");
+    this.currentAddressInput = page.locator("#currentAddress");
+    this.permanentAddressInput = page.locator("#permanentAddress");
+    this.submitButton = page.locator("#submit");
 
-    this.outputSection = page.locator('#output');
-    this.nameOutput = page.locator('#name');
-    this.emailOutput = page.locator('#email');
-    this.currentAddressOutput = page.locator('#output #currentAddress');
-    this.permanentAddressOutput = page.locator('#output #permanentAddress');
+    this.outputSection = page.locator("#output");
+    this.nameOutput = page.locator("#name");
+    this.emailOutput = page.locator("#email");
+    this.currentAddressOutput = page.locator("#output #currentAddress");
+    this.permanentAddressOutput = page.locator("#output #permanentAddress");
   }
 
   async fillTextBoxForm({ fullName, email, currentAddress, permanentAddress }) {

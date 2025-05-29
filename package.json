@@ -11,8 +11,7 @@
     "test:BDD": "npx cucumber-js --require src/features/step_definitions/**/*.js --require src/features/support/**/*.js src/features/**/*.feature",
     "test:headed": "npx playwright test --headed",
     "test:report": "npx playwright show-report",
-    "test:firefox": "npx playwright test --project=firefox",
-    "test:ci": "npx playwright install && npx playwright test"
+    "test:firefox": "npx playwright test --project=firefox"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^11.3.0",
