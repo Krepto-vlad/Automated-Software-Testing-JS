@@ -1,6 +1,6 @@
 import {BasePage} from './index';
-import UserCreator from "../helper/UserCreator";
-import DataStorage from "../helper/DataStorage";
+import UserCreator from "../helpers/UserCreator";
+import DataStorage from "../helpers/DataStorage";
 
 export default class FormPage extends BasePage {
   constructor(page) {
