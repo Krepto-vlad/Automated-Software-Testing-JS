@@ -5,7 +5,7 @@ Given("I open the broken links page", async function () {
   await this.launch();
   await this.page.goto("https://demoqa.com/broken");
 });
-
+// TODO Remove locators to the page object. and rewrite step I click the valid {string} link
 When("I click the valid link", async function () {
   await this.page.locator('a[href="http://demoqa.com"]').click();
 });

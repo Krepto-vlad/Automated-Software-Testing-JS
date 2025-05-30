@@ -7,7 +7,7 @@ Given("I open the date picker page", async function () {
   await this.launch();
   await this.page.goto("https://demoqa.com/date-picker", { waitUntil: "load" });
 });
-
+//TODO Rewrite using dropdowns for month and year, clicking on date 
 When("I select the date {string}", async function (date) {
   const dateInput = this.page.locator("#datePickerMonthYearInput");
   await dateInput.fill("");
