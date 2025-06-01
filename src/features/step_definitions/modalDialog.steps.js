@@ -1,21 +1,12 @@
-import { Given, When, Then } from "@cucumber/cucumber";
-import { expect } from "@playwright/test";
-
-Given("I open the modal dialogs page", async function () {
-  await this.launch();
-  await this.page.goto("https://demoqa.com/modal-dialogs");
-});
+import { When, Then } from "@cucumber/cucumber";
+import { ModalDialogsPage } from "../pagesBDD/modalDialogPage.js";
 
 When("I click the {string} button", async function (buttonText) {
-  const button = this.page.getByRole("button", { name: buttonText });
-  await button.click();
+  this.modalPage = new ModalDialogsPage(this.page);
+  await this.modalPage.clickButtonByText(buttonText);
 });
 
-Then(
-  "I should see the modal with title {string}",
-  async function (expectedTitle) {
-    const modalTitle = await this.page.locator(".modal-title").textContent();
-    expect(modalTitle).toBe(expectedTitle);
-    await this.close();
-  }
-);
+Then("I should see the modal with title {string}", async function (expectedTitle) {
+  await this.modalPage.verifyModalTitle(expectedTitle);
+  await this.close();
+});

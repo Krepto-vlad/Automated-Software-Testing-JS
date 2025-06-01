@@ -1,29 +1,22 @@
-import { Given, When, Then } from "@cucumber/cucumber";
-import { expect } from "@playwright/test";
+import { When, Then } from "@cucumber/cucumber";
+import { faker } from "@faker-js/faker";
+import { TextBoxPage } from "../pagesBDD/textBoxPage.js";
 
-Given("I open the text box page", async function () {
-  await this.launch();
-  await this.page.goto("https://demoqa.com/text-box");
+When("I fill in the text box form with generated data", async function () {
+  this.textBoxPage = new TextBoxPage(this.page);
+
+  this.generatedData = {
+    name: faker.person.fullName(),
+    email: faker.internet.email(),
+    currentAddress: faker.location.streetAddress(),
+    permanentAddress: faker.location.secondaryAddress(),
+  };
+
+  await this.textBoxPage.fillForm(this.generatedData);
 });
 
-When(
-  "I fill in the form with name {string}, email {string}, current address {string}, and permanent address {string}",
-  async function (name, email, currentAddress, permanentAddress) {
-    await this.page.fill("#userName", name);
-    await this.page.fill("#userEmail", email);
-    await this.page.fill("#currentAddress", currentAddress);
-    await this.page.fill("#permanentAddress", permanentAddress);
-    await this.page.click("#submit");
-  }
-);
+Then("I should see the generated name and email in the output", async function () {
+  await this.textBoxPage.verifyOutput(this.generatedData);
+  await this.close();
+});
 
-Then(
-  "I should see the output with name {string} and email {string}",
-  async function (name, email) {
-    const nameOutput = await this.page.locator("#name").textContent();
-    const emailOutput = await this.page.locator("#email").textContent();
-    expect(nameOutput).toContain(name);
-    expect(emailOutput).toContain(email);
-    await this.close();
-  }
-);

@@ -1,18 +1,14 @@
-import { Given, When, Then } from "@cucumber/cucumber";
-import { expect } from "@playwright/test";
+import { When, Then } from '@cucumber/cucumber';
+import { expect } from '@playwright/test';
+import { ButtonsPage } from '../pagesBDD/buttonPage.js';
 
-Given("I open the buttons page", async function () {
-  await this.launch();
-  await this.page.goto("https://demoqa.com/buttons");
+When('I double click the {string} button', async function (buttonText) {
+  this.buttonsPage = new ButtonsPage(this.page);
+  await this.buttonsPage.doubleClickButton(buttonText);
 });
 
-When("I double click the {string} button", async function (buttonText) {
-  const button = this.page.locator("button", { hasText: buttonText });
-  await button.dblclick();
-});
-
-Then("I should see the message {string}", async function (expectedMessage) {
-  const message = await this.page.locator("#doubleClickMessage").textContent();
+Then('I should see the message {string}', async function (expectedMessage) {
+  const message = await this.buttonsPage.getDoubleClickMessage();
   expect(message).toBe(expectedMessage);
   await this.close();
 });
