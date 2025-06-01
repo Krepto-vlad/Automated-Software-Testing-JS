@@ -4,9 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
     "test": "npx playwright test",
     "test:BDD": "npx cucumber-js --require src/features/step_definitions/**/*.js --require src/features/support/**/*.js src/features/**/*.feature",
     "test:headed": "npx playwright test --headed",
@@ -24,3 +21,4 @@
     "@faker-js/faker": "^9.8.0"
   }
 }
+

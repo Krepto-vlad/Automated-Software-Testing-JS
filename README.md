@@ -45,7 +45,7 @@ npm run test:BDD
 
 Run BDD test by tag @date
 ```bash
-npx cucumber-js --tags "@date"
+npx cucumber-js --require src/features/step_definitions/**/*.js --require src/features/support/**/*.js --tags "@textBox" src/features/**/*.feature
 ```
 
 ---
