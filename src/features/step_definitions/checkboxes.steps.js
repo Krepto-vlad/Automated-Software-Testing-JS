@@ -1,8 +1,9 @@
 import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
-
+// TODO use .waitForElementState('visible'); or .waitForElementState('attached'); or .waitForElementState('enabled'); for interacting with elements
+// avoid hard coding timeouts.
 setDefaultTimeout(40 * 1000);
-
+// TODO Remove locators to the page object
 Given("I open the checkbox page", async function () {
   await this.launch();
   await this.page.goto("https://demoqa.com/checkbox", { waitUntil: "load" });

@@ -5,7 +5,7 @@ Given("I open the accordion page", async function () {
   await this.launch();
   await this.page.goto("https://demoqa.com/accordian");
 });
-
+// TODO Remove locators to the page object
 When("I expand the {string} section", async function (sectionTitle) {
   const section = this.page.locator(`#section1Heading >> text=${sectionTitle}`);
   await section.click();

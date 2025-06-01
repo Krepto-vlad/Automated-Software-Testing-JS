@@ -77,3 +77,12 @@ Launch Test Reports:
 ```bash
 npm run test:report
 ```
+
+
+# review 05 30
+
+* Does tesst launch in parallel with `npx cucumber-js --tags "@date"` . If yes how to configure workers?
+* remove all locators to the POM.
+* Use random data for tests.
+* create base step "I open the {string} page and reuse 
+* Remove  `-dev -build -preview` scripts from project. 

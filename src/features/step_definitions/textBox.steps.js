@@ -5,7 +5,7 @@ Given("I open the text box page", async function () {
   await this.launch();
   await this.page.goto("https://demoqa.com/text-box");
 });
-
+//TODO remove locators to the page object
 When(
   "I fill in the form with name {string}, email {string}, current address {string}, and permanent address {string}",
   async function (name, email, currentAddress, permanentAddress) {
