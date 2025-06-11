@@ -5,20 +5,13 @@
   "type": "module",
   "scripts": {
     "test": "npx playwright test",
-    "test:BDD": "npx cucumber-js --require src/features/step_definitions/**/*.js --require src/features/support/**/*.js src/features/**/*.feature",
-    "test:headed": "npx playwright test --headed",
-    "test:report": "npx playwright show-report",
-    "test:firefox": "npx playwright test --project=firefox"
+    "test:api": "npx playwright test --project=API"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.52.0",
-    "cucumber": "^6.0.7",
-    "faker": "^5.5.3",
-    "playwright-cucumber-steps": "^0.0.1"
+    "faker": "^5.5.3"
   },
   "dependencies": {
     "@faker-js/faker": "^9.8.0"
   }
 }
-
