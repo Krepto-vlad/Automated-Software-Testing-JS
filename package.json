@@ -4,11 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "npx playwright test",
+    "test:api": "npx playwright test --project=API"
   },
   "devDependencies": {
-    "vite": "^6.2.0"
+    "@playwright/test": "^1.52.0",
+    "faker": "^5.5.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0"
   }
 }
