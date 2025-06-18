@@ -8,6 +8,6 @@ export default defineConfig({
       'Content-Type': 'application/json',
     },
   },
-  testDir: 'api-tests', 
+  testDir: 'src/api-tests', 
   reporter: [['html']],
 });
